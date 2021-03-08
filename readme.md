@@ -1,5 +1,9 @@
 ```
 
+docker-compose up
+
+## OR
+
 docker run \
     --name wrksps \
     -it \

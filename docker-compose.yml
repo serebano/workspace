@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+
+  workspace:
+    image: workspace:latest
+    ports: 
+      - 7733:7733
+    environment: 
+      SCRAPP_URL_CHROME: http://37.59.47.214:3040/?token=MY-SUPER-SECRET-TOKEN
+    volumes: 
+      - ./:/app
+    command: ["nodemon index.js"]
+
+networks:
+  default:
+    name: scrapp-net
+    external: true

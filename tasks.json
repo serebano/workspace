@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Node Image",
+        "type": "docker-build",
+        "platform": "node"
+      }
+    ]
+  }

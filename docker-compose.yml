@@ -4,14 +4,13 @@ services:
 
   workspace:
     image: workspace:latest
-    #build: .
     ports: 
       - 7733:7733
     environment: 
-      DEBUG: "true"
-      SCRAPP_BROWSER_WS_ENDPOINT: http://37.59.47.214:3040/?token=MY-SUPER-SECRET-TOKEN
-    # volumes: 
-    #   - ./:/app
+      DEBUG: ${DEBUG}
+      SCRAPP_BROWSER_WS_ENDPOINT: ${SCRAPP_BROWSER_WS_ENDPOINT}
+    volumes: 
+      - /root/.coder-config/workspace:/app
     command: ["yarn", "dev"]
 
 networks:

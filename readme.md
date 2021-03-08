@@ -1,5 +1,10 @@
 ```
 
-docker run -it -p 7733:7733 workspace
+docker run \
+    --name wrksps \
+    -it \
+    -v /root/.coder-config/workspace:/app \
+    -p 7733:7733 \
+    workspace 
 
 ```

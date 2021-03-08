@@ -10,7 +10,7 @@ RUN yarn
 
 FROM installer as build
 
-COPY . .
+COPY . ./
 
 EXPOSE 7733
 
